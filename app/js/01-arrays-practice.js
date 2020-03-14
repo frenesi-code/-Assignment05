@@ -327,6 +327,7 @@ for (const iterator of filmNames) {
 // Make sure to display the result in the console window. Within the function, loop through the passed in array and display the result so that it looks exactly like this in 
 // the console window: Employees: ZAK JESSICA MARK FRED SALLY
 
+/*
 let employees = ["ZAK", "JESSICA", "MARK", "FRED", "SALLY"];
 
 function showEmployee(employees) {
@@ -338,8 +339,19 @@ function showEmployee(employees) {
 }
 
 showEmployee(employees);
+*/
 
 //STEP 18
+// Write a JavaScript function to filter false, null, 0 and blank values from an array.
+// Test Data: window.console.log(filterValues([58, '', 'abcd', true, null, false, 0])); 
+// Expected Result: [58, "abcd", true]
+
+let arr = [58, '', 'abcd', true, null, false, 0];
+let fileteredItems = arr.filter(function (e) {
+    return e;
+});
+
+console.log(fileteredItems);
 
 //STEP 19
 
