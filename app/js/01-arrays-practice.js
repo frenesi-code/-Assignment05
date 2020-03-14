@@ -29,6 +29,7 @@ console.log(movies.length);
 // Declare an array called movies using literal notation. Then, assign one of your favorite movies to each index in the array until you have 5 total movies in your array. 
 // Now, use the delete operator to remove the first movie in the array. Use the console to display the contents of the array.
 
+/*
 let movies = [];
 
 for (const [index, movie] of favoriteMovies.entries()) {
@@ -37,14 +38,25 @@ for (const [index, movie] of favoriteMovies.entries()) {
 
 movies.shift()
 console.log(movies);
-
-/*
-movies.shift();
-console.log(movies.length);
-console.log(movies);
 */
 
 //STEP 5
+// Declare an array called movies using literal notation. Then, assign one of your favorite movies to each index in the array until you have 7 total movies in your array. 
+// Now, use a for loop to iterate through the array and display each movie within the console window.
+
+let movies = [];
+
+movies[0] = 'The Seven Samurai';
+movies[1] = 'Bonnie and Clyde';
+movies[2] = 'Reservoir Dogs';
+movies[3] = 'Airplane!';
+movies[4] = 'Pan\'s Labyrinth';
+movies[5] = 'Doctor Zhivago';
+movies[6] = 'The Deer Hunter';
+
+for (const movie of movies) {
+    console.log(movie);
+}
 
 //STEP 6
 
