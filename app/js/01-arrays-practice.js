@@ -75,7 +75,7 @@ movies[6] = 'The Deer Hunter';
 
 for (const movie in movies) {
     console.log(movies[movie]);
-}
+} 
 
 //STEP 7
 
