@@ -246,6 +246,7 @@ console.log(employees[1]['name']);
 //STEP 14
 // Copy the code from step 13. Modify the code slightly so that you’re using a loop to iterate through the array and print out the names of both employees.
 
+/*
 let employee1 = [{
     "employeeid": 1,
     "name": 'Paulo',
@@ -262,11 +263,47 @@ let employee2 = [{
 
 let employees = employee1.concat(employee2);
 
-for (const iterator of employees) {
-    console.log(iterator.name);
+for (const employee of employees) {
+    console.log(employee.name);
 }
+*/
 
 //STEP 15
+// Copy the code from step 14. Now add a third employee and set his employment status to false. 
+// Then, programmatically loop through the array but don’t display an employee if they aren’t a current employee of the company. 
+// Basically, only the first two should appear in the console window.
+
+let employee1 = [{
+    "employeeid": 1,
+    "name": 'Paulo',
+    "title": "CEO",
+    "deparment": "Executive",
+    "employment_status": true
+}]
+
+let employee2 = [{
+    "employeeid": 2,
+    "name": 'Zak',
+    "title": "CTO",
+    "deparment": "Technology",
+    "employment_status": true
+}]
+
+let employee3 = [{
+    "employeeid": 3,
+    "name": 'Pele',
+    "title": "Soccer Player",
+    "deparment": "Sport",
+    "employment_status": false
+}]
+
+let employees = [].concat(employee1, employee2, employee3);
+
+for (const employee of employees) {
+    if (employee.employment_status) {
+        console.log(employee.name);
+    }    
+}
 
 //STEP 16
 
