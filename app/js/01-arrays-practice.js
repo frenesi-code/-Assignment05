@@ -206,6 +206,7 @@ console.log(movies[0]);
 //STEP 12
 // Programmatically retrieve the movies in your array that you do not like and return their indices. Then, using those indices, programmatically add movies that you do like. 
 
+/*
 let likedVideos = ['Lion King', 'Avengers'];
 let unlikedVideos = ['The Seven Samurai', 'Bonnie and Clyde'];
 
@@ -216,8 +217,30 @@ for (let indexUnlinked = 0; indexUnlinked < unlikedVideos.length; indexUnlinked+
 }
 
 console.log(unlikedVideos);
+*/
 
 //STEP 13
+// Create two associative arrays called employee1 and employee2 respectively. Each array should have an employeeid, name, title, department, 
+// and whether or not the employee is a current employee of the company. Now, add both of those associative arrays to a new array called employees. 
+// Then, programmatically display the name of the second employee within a console window. 
+
+
+let employee1 = [{
+    "employeeid": 1,
+    "name": 'Paulo',
+    "title": "CEO",
+    "deparment": "Executive"
+}]
+
+let employee2 = [{
+    "employeeid": 5,
+    "name": 'Zak',
+    "title": "CTO",
+    "deparment": "Technology"
+}]
+
+let employees = employee1.concat(employee2);
+console.log(employees);
 
 //STEP 14
 
