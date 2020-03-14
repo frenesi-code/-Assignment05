@@ -346,13 +346,25 @@ showEmployee(employees);
 // Test Data: window.console.log(filterValues([58, '', 'abcd', true, null, false, 0])); 
 // Expected Result: [58, "abcd", true]
 
+/*
 let arr = [58, '', 'abcd', true, null, false, 0];
 let fileteredItems = arr.filter(function (e) {
     return e;
 });
 
 console.log(fileteredItems);
+*/
 
 //STEP 19
+// Write a JavaScript function to get a random item from an array. So if I create a numeric array with 10 numbers and then pass that array into my function, 
+// the function should randomly return one of those numbers.
+
+let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function getRandom(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+console.log("random number =>", getRandom(myArray));
 
 //STEP 20
