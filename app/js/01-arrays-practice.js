@@ -273,6 +273,7 @@ for (const employee of employees) {
 // Then, programmatically loop through the array but don’t display an employee if they aren’t a current employee of the company. 
 // Basically, only the first two should appear in the console window.
 
+/*
 let employee1 = [{
     "employeeid": 1,
     "name": 'Paulo',
@@ -304,10 +305,22 @@ for (const employee of employees) {
         console.log(employee.name);
     }    
 }
+*/
 
 //STEP 16
+// Create a multi-dimensional array that contains your 5 favorite movies and their ranking from 1-5. 
+// The array should look something like this: movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
+// Now, loop through the array and filter out and display only the movie names. You must use the filter() method and you’ll need to filter out the names by their primitive data type.
+
+let favFilms = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", true], ["Movie 4", 4], ["Movie 5", 5]];
+let filmNames = favFilms.filter(films => typeof String(favFilms));
+
+for (const iterator of filmNames) {
+    console.log(iterator[0]);
+}
 
 //STEP 17
+
 
 //STEP 18
 
