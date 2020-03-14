@@ -82,7 +82,7 @@ for (const movie in movies) {
 //STEP 7
 // Copy the code from step 5. Using the for-in loop to iterate through the array, display each movie within the console window in a sorted view.
 
-
+/*
 let movies = [];
 
 movies[0] = 'The Seven Samurai';
@@ -94,8 +94,43 @@ movies[5] = 'Doctor Zhivago';
 movies[6] = 'The Deer Hunter';
 
 console.log(movies.sort()); 
+*/
 
 //STEP 8
+// Copy the code from step 5. Under the existing array, create a new array called leastFavMovies. Populate the array with the 3 movies that you regret watching. 
+// Display both arrays within the console window so that it’s formatted to look like this (note the spacing, you must include that too):
+
+let movies = [];
+let leastFavMovies = [];
+
+movies[0] = 'The Seven Samurai';
+movies[1] = 'Bonnie and Clyde';
+movies[2] = 'Reservoir Dogs';
+movies[3] = 'Airplane!';
+movies[4] = 'Pan\'s Labyrinth';
+movies[5] = 'Doctor Zhivago';
+movies[6] = 'The Deer Hunter';
+
+leastFavMovies[0] = movies[2];
+leastFavMovies[1] = movies[4];
+leastFavMovies[2] = movies[5];
+
+console.log('Movies I like:');
+console.log('\n');
+
+for (const movie of movies) {
+    console.log(movie);
+}
+
+console.log('\n');
+
+console.log('Movies I regret watching::');
+console.log('\n');
+
+for (const movie of leastFavMovies) {
+    console.log(movie);
+}
+
 
 //STEP 9
 
