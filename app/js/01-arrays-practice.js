@@ -1,7 +1,7 @@
 //STEP 1
 // Create a string array that contains your five favorite movies. Then, use the console to display the second movie in your array.
 
-var favoriteMovies = ['The Seven Samurai', 'Bonnie and Clyde', 'Reservoir Dogs', 'Airplane!', 'Pan\'s Labyrinth'];
+//var favoriteMovies = ['The Seven Samurai', 'Bonnie and Clyde', 'Reservoir Dogs', 'Airplane!', 'Pan\'s Labyrinth'];
 //console.log(favoriteMovies[1]);
 
 //STEP 2
@@ -100,6 +100,7 @@ console.log(movies.sort());
 // Copy the code from step 5. Under the existing array, create a new array called leastFavMovies. Populate the array with the 3 movies that you regret watching. 
 // Display both arrays within the console window so that it’s formatted to look like this (note the spacing, you must include that too):
 
+/*
 let movies = [];
 let leastFavMovies = [];
 
@@ -130,9 +131,30 @@ console.log('\n');
 for (const movie of leastFavMovies) {
     console.log(movie);
 }
-
+*/
 
 //STEP 9
+// Copy the code from step 8. Now, use the concat() method to merge the two arrays together into a single array called movies. 
+// Use the console window to display the list in reverse sorted order.
+
+let favoriteMovies = [];
+let leastFavMovies = [];
+
+favoriteMovies[0] = 'The Seven Samurai';
+favoriteMovies[1] = 'Bonnie and Clyde';
+favoriteMovies[2] = 'Reservoir Dogs';
+favoriteMovies[3] = 'Airplane!';
+favoriteMovies[4] = 'Pan\'s Labyrinth';
+favoriteMovies[5] = 'Doctor Zhivago';
+favoriteMovies[6] = 'The Deer Hunter';
+
+leastFavMovies[0] = favoriteMovies[2];
+leastFavMovies[1] = favoriteMovies[4];
+leastFavMovies[2] = favoriteMovies[5];
+
+movies = new Array(favoriteMovies.concat(leastFavMovies));
+console.log(movies.reverse());
+
 
 //STEP 10
 
