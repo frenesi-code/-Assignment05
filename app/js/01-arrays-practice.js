@@ -183,6 +183,7 @@ console.log(movies[movies.length - 1]);
 //STEP 11
 // Copy the code from step 10. Remove the previous method and this time use a method to return just the first item in the array and display it within the console window.
 
+/*
 let favoriteMovies = [];
 let leastFavMovies = [];
 
@@ -200,8 +201,21 @@ leastFavMovies[2] = favoriteMovies[3];
 
 let movies = favoriteMovies.concat(leastFavMovies);
 console.log(movies[0]);
+*/
 
 //STEP 12
+// Programmatically retrieve the movies in your array that you do not like and return their indices. Then, using those indices, programmatically add movies that you do like. 
+
+let likedVideos = ['Lion King', 'Avengers'];
+let unlikedVideos = ['The Seven Samurai', 'Bonnie and Clyde'];
+
+for (let indexUnlinked = 0; indexUnlinked < unlikedVideos.length; indexUnlinked++) {
+    for (let indexLiked = 0; indexLiked < likedVideos.length; indexLiked++) {
+        unlikedVideos[indexLiked] = likedVideos[indexLiked];        
+    }
+}
+
+console.log(unlikedVideos);
 
 //STEP 13
 
