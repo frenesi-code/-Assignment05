@@ -5,6 +5,12 @@ let favoriteMovies = ['The Seven Samurai', 'Bonnie and Clyde', 'Reservoir Dogs',
 console.log(favoriteMovies[1]);
 
 //STEP 2
+// Declare an array called movies using the function constructor method. Add the length of 5 into the constructor. 
+// Then, assign one of your favorite movies to each index in the array until you have 5 total movies in your array. Then, use the console to display the first movie in your array.
+
+let movies = new Array(5);
+movies = favoriteMovies;
+console.log(movies[0]);
 
 //STEP 3
 
