@@ -160,6 +160,7 @@ console.log(movies.reverse());
 //STEP 10
 // Copy the code from step 9. Use an array function to return just the last item in the array and display it within the console window.
 
+/*
 let favoriteMovies = [];
 let leastFavMovies = [];
 
@@ -177,8 +178,29 @@ leastFavMovies[2] = favoriteMovies[3];
 
 let movies = favoriteMovies.concat(leastFavMovies);
 console.log(movies[movies.length - 1]);
+*/
 
 //STEP 11
+// Copy the code from step 10. Remove the previous method and this time use a method to return just the first item in the array and display it within the console window.
+
+let favoriteMovies = [];
+let leastFavMovies = [];
+
+favoriteMovies[0] = 'The Seven Samurai';
+favoriteMovies[1] = 'Bonnie and Clyde';
+favoriteMovies[2] = 'Reservoir Dogs';
+favoriteMovies[3] = 'Airplane!';
+favoriteMovies[4] = 'Pan\'s Labyrinth';
+favoriteMovies[5] = 'Doctor Zhivago';
+favoriteMovies[6] = 'The Deer Hunter';
+
+leastFavMovies[0] = favoriteMovies[1];
+leastFavMovies[1] = favoriteMovies[2];
+leastFavMovies[2] = favoriteMovies[3];
+
+let movies = favoriteMovies.concat(leastFavMovies);
+console.log(movies[0]);
+
 
 //STEP 12
 
