@@ -63,6 +63,7 @@ for (const movie of movies) {
 //STEP 6
 // Copy the code from step 5. Now, use a for-in loop to iterate through the array and display each movie within the console window.
 
+/*
 let movies = [];
 
 movies[0] = 'The Seven Samurai';
@@ -76,8 +77,23 @@ movies[6] = 'The Deer Hunter';
 for (const movie in movies) {
     console.log(movies[movie]);
 } 
+*/
 
 //STEP 7
+// Copy the code from step 5. Using the for-in loop to iterate through the array, display each movie within the console window in a sorted view.
+
+
+let movies = [];
+
+movies[0] = 'The Seven Samurai';
+movies[1] = 'Bonnie and Clyde';
+movies[2] = 'Reservoir Dogs';
+movies[3] = 'Airplane!';
+movies[4] = 'Pan\'s Labyrinth';
+movies[5] = 'Doctor Zhivago';
+movies[6] = 'The Deer Hunter';
+
+console.log(movies.sort()); 
 
 //STEP 8
 
