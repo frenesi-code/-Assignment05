@@ -359,6 +359,7 @@ console.log(fileteredItems);
 // Write a JavaScript function to get a random item from an array. So if I create a numeric array with 10 numbers and then pass that array into my function, 
 // the function should randomly return one of those numbers.
 
+/*
 let myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 function getRandom(array) {
@@ -366,5 +367,15 @@ function getRandom(array) {
 }
 
 console.log("random number =>", getRandom(myArray));
+*/
 
 //STEP 20
+// Write a JavaScript function to get the largest number from a numeric array.
+
+let myArray = [8, 2, 36, 4, 5, 20, 7, 8, 98, 10];
+
+function getLargest(array) {
+    return Math.max(...array);
+}
+
+console.log(getLargest(myArray));
