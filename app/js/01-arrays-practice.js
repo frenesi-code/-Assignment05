@@ -224,6 +224,7 @@ console.log(unlikedVideos);
 // and whether or not the employee is a current employee of the company. Now, add both of those associative arrays to a new array called employees. 
 // Then, programmatically display the name of the second employee within a console window. 
 
+/*
 let employee1 = [{
     "employeeid": 1,
     "name": 'Paulo',
@@ -240,8 +241,30 @@ let employee2 = [{
 
 let employees = employee1.concat(employee2);
 console.log(employees[1]['name']);
+*/
 
 //STEP 14
+// Copy the code from step 13. Modify the code slightly so that you’re using a loop to iterate through the array and print out the names of both employees.
+
+let employee1 = [{
+    "employeeid": 1,
+    "name": 'Paulo',
+    "title": "CEO",
+    "deparment": "Executive"
+}]
+
+let employee2 = [{
+    "employeeid": 5,
+    "name": 'Zak',
+    "title": "CTO",
+    "deparment": "Technology"
+}]
+
+let employees = employee1.concat(employee2);
+
+for (const iterator of employees) {
+    console.log(iterator.name);
+}
 
 //STEP 15
 
