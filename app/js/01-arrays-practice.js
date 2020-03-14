@@ -201,7 +201,6 @@ leastFavMovies[2] = favoriteMovies[3];
 let movies = favoriteMovies.concat(leastFavMovies);
 console.log(movies[0]);
 
-
 //STEP 12
 
 //STEP 13
