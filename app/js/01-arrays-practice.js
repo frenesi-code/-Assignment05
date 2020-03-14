@@ -312,15 +312,32 @@ for (const employee of employees) {
 // The array should look something like this: movies = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", 3], ["Movie 4", 4], ["Movie 5", 5]];
 // Now, loop through the array and filter out and display only the movie names. You must use the filter() method and you’ll need to filter out the names by their primitive data type.
 
+/*
 let favFilms = [["Movie 1", 1], ["Movie 2", 2], ["Movie 3", true], ["Movie 4", 4], ["Movie 5", 5]];
 let filmNames = favFilms.filter(films => typeof String(favFilms));
 
 for (const iterator of filmNames) {
     console.log(iterator[0]);
 }
+*/
 
 //STEP 17
+// Create a string array called employees using literal notation and populate the array with several employee names. 
+// Then, create an anonymous function called showEmployee. The function should accept a parameter. Call this function, passing in the employees array into the function as a parameter. 
+// Make sure to display the result in the console window. Within the function, loop through the passed in array and display the result so that it looks exactly like this in 
+// the console window: Employees: ZAK JESSICA MARK FRED SALLY
 
+let employees = ["ZAK", "JESSICA", "MARK", "FRED", "SALLY"];
+
+function showEmployee(employees) {
+    console.log("Employees:"); 
+    console.log("\n"); 
+    for (const employee of employees) {
+        console.log(employee);
+    }
+}
+
+showEmployee(employees);
 
 //STEP 18
 
