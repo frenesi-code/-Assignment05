@@ -1,4 +1,8 @@
 //STEP 1
+// Create a string array that contains your five favorite movies. Then, use the console to display the second movie in your array.
+
+let favoriteMovies = ['The Seven Samurai', 'Bonnie and Clyde', 'Reservoir Dogs', 'Airplane!', 'Pan\'s Labyrinth'];
+console.log(favoriteMovies[1]);
 
 //STEP 2
 
