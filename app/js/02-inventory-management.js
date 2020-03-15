@@ -11,36 +11,50 @@ function display_menu() {
     window.console.log("");
 }
 
-function displayProducts(products) {
-    let orderedProducts = products.sort((a, b) => (a.sku > b.sku) ? 1 : -1);
+function displayProducts() { 
+    let products = JSON.parse(localStorage.getItem('products'));
     
-    for (const product of orderedProducts) {
-        displayProduct(product)
+    if (products.length === 0) {    
+        console.log('There is no product in the inventory!');    
     }
 
-    console.log('');
+    if (products.length > 0) {        
+        let orderedProducts = products.sort((a, b) => (a.sku > b.sku) ? 1 : -1);
+
+        for (const product of orderedProducts) {
+            displayProduct(product)
+        }
+    
+        console.log('');
+    }
+
 }
 
 function displayProduct(product, message) {    
     console.log(product.sku + ' ' + product.name + ' (' +  product.quantity + ') ' + '$' + product.cost + (message ? message : ''));    
 }
 
-function add(products) {
-    var newProduct = {};
+function add() {
+    let products = JSON.parse(localStorage.getItem('products'));
+    let newProduct = {};
     
     newProduct.sku = window.prompt("Enter the product's sku");
     newProduct.name = window.prompt("Enter the product's name");
     newProduct.quantity = window.prompt("Enter the product's quantity");
     newProduct.cost = window.prompt("Enter the product's cost");
-
+    
     products.push(newProduct);
+    
+    localStorage.setItem('products', JSON.stringify(products)); 
     displayProduct(newProduct, ' was added.');
+    
     console.log('');
 }
 
-function del(products) {
+function remove() {
     let productSKU = parseInt(window.prompt("Product SKU to delete"));
-    
+    let products = JSON.parse(localStorage.getItem('products'));
+
     const hasProduct = products.filter(function(products) {
         return products.sku === productSKU;
     });
@@ -53,16 +67,18 @@ function del(products) {
 
     for (const [index, product] of products.entries()) {
         if (product.sku === productSKU) {            
-            products.splice(index, 1);
+            products.splice(index, 1);            
             displayProduct(product, ' was deleted.');
+            localStorage.setItem('products', JSON.stringify(products)); 
             console.log('');
         }
     }
 }
 
-function update(products) {
+function update() {
     let productSKU = parseInt(window.prompt("Product SKU to update"));
-    
+    let products = JSON.parse(localStorage.getItem('products'));
+
     const hasProduct = products.filter(function(products) {
         return products.sku === productSKU;
     });
@@ -84,16 +100,15 @@ function update(products) {
         if (product.sku === productSKU) {            
             products.splice(index, 1, newProduct);
             displayProduct(product, ' was updated.');
+            localStorage.setItem('products', JSON.stringify(products)); 
             console.log('');
         }
     }
 }
 
 function main() {    
-    let command;
-    let inventory = [];
-    
-    let products = [
+    let command;    
+    let preLoadedProducts = [
         {
           sku: 9382,
           name: "Hat",
@@ -125,25 +140,29 @@ function main() {
           cost: 122.40
         }
     ]
+    
+    if (!localStorage.getItem('products')){        
+        localStorage.setItem('products', JSON.stringify(preLoadedProducts)); 
+    }
 
     display_menu();    
     
     while (true) {
         command = window.prompt("Enter command");
         if (command !== null) {
-            if (command === "view") {
-                displayProducts(products);
+            if (command === "view") {                
+                displayProducts();
             } else if (command === "add") {
-                add(products);
+                add();
             } else if (command === "delete") {
-                del(products);
+                remove();
             } else if (command === "update") {
-                update(products);    
+                update();    
             } else if (command === "exit") {
                 break;
             } else {
                 window.alert("That is not a valid command.");
-            }
+            }            
         } else {
             break;
         }
@@ -151,4 +170,3 @@ function main() {
     window.console.log("Program terminated.");
 }
 
-main();
